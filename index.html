@@ -1,0 +1,203 @@
+<!DOCTYPE HTML>
+<html>
+
+ <head>
+
+  <meta charset="utf-8">
+  <title>トップページ</title>
+
+  <style type="text/css">
+    
+    body{
+    	background-color: #4b9dff;
+    	color: #000000;
+    	margin-right: auto;
+    	margin-left: auto;
+    	width: 700px;
+    	font-size: 62.5%;
+    }
+
+     #tips li{
+    	list-style: none;
+    	border-bottom: 1px solid #ccc;
+    	padding-left: 8em;
+    }
+
+    #tips {
+    	width: 700px;
+    	min-height: 200px;
+    	margin-top: 1.5%;
+    	margin-bottom: 1.5%;
+    	background-color: #ffffff;
+    	font-size: 1.6em;
+    	line-height: 1.5em;
+    	border-radius: 15px;
+    }
+
+    #contents {
+    	width: 700px;
+    	min-height: 500px;
+    	margin-top: 1.5%;
+    	margin-bottom: 1.5%;
+    	background-color: #ddd;
+    	font-size: 1.6em;
+    	line-height: 1.5em;
+    	border-radius: 15px;
+    	position: absolute;
+    }
+
+    #footer {
+    	position: fixed;
+    	bottom: 0;
+    	width: 100%
+    	height: 100px;
+    }
+
+
+    #hamu-menu {
+    	background-color: #fff;
+    	box-sizing: border-box;
+    	height: 100%;
+    	padding: 10px 40px;
+    	position: fixed;
+    	right: -300px;
+    	top: 0;
+    	transition:  transform 0.3s linear 0s;
+    	width: 300px;
+    	z-index: 1000;
+    }
+
+    #hamu-menu::before {
+    	background-color: #fff;
+    	border-radius: 0 0 0 10px;
+    	color: #333;
+    	content: "≡";
+    	display: block;
+    	font-size: 50px;
+    	height: 50px;
+    	line-height: 50px;
+    	position: absolute;
+    	right: 100%;
+    	text-align: center;
+    	top: 0;
+    	width: 50px;
+    }
+
+    #menu-bg {
+    	background-color: #333;
+    	display: block;
+    	height: 100%;
+    	opacity: 0;
+    	position: fixed;
+    	right: 0;
+    	top: 0;
+    	transition: all 0.3s linear 0s;
+    	width: 100%;
+    	z-index: -1;
+    }
+
+    #hamu-menu:hover {
+    	transform: translate(-300px);
+    }
+
+    #hamu-menu:hover + #menu-bg {
+    	opacity: 0.5;
+    	z-index: 999;
+    }
+
+    .button {
+	    display: inline-block;
+	    width: 200px;
+	    height: 54px;
+	    text-align: center;
+		text-decoration: none;
+		line-height: 54px;
+		outline: none;
+		position: relative;
+		background-color: #1abc9c;
+		border-radius: 4px;
+		color: #fff;
+		line-height: 52px;
+	    -webkit-transition: none;
+	    transition: none;
+	    box-shadow: 0 3px 0 #0e8c73;
+	    text-shadow: 0 1px 1px rgba(0, 0, 0, .3);
+    }
+
+    .button::before,
+    .button::after {
+	    position: absolute;
+	    z-index: -1;
+	    display: block;
+	    content: '';
+    }
+
+    .button:hover {
+	    background-color: #31c8aa;
+	    box-shadow: 0 3px 0 #23a188;
+    }
+
+
+    .button:active {
+	    top: 3px;
+	    box-shadow: none;
+    }
+   
+    .button,
+    .button::before,
+    .button::after {
+	    -webkit-box-sizing: border-box;
+	    -moz-box-sizing: border-box;
+	    box-sizing: border-box;
+	    -webkit-transition: all .3s;
+	    transition: all .3s;
+    }
+  </style>
+
+ </head>
+
+ <body>
+
+  <header><a href="index.html"><img src="./logo.png" width="700px" height="300px" style="position: center;" ></a></header> <!--  ヘッダー用テキスト -->
+
+
+ <!--  メニュー用テキスト -->
+  <!--<div id="hamu-menu">
+   <ul>
+    <li>メニュー1</li>
+    <li>メニュー2</li>
+    <li>メニュー3</li>
+   </ul>
+  </div>
+  <div id="menu-bg"></div>-->
+  
+
+  <!--  お知らせリスト  -->
+  <div id="tips">
+   	<li>2017/07/03/ &nbsp; サイトを更新しました。</li>
+   	<li>2017/08/01/ &nbsp; ログイン機能を追加しました。</li>
+   	<br>
+   	<center>
+   	  <a href="reg.html" class="button">会員登録</a>&nbsp;&nbsp;
+   	  <a href="login.html" class="button">ログイン</a>
+   	</center>
+   	
+
+  </div>
+
+  <div id="contents">
+   <pre>
+                          　　　おすすめの小説
+                                <a href="list.php?id=solution">これ</a>
+   </pre>
+  </div>
+
+  <!-- フッター用テキスト  -->
+  <div id="footer">
+    <center>Copyright &copy; SampleCompany All Rights Reserved.</center>
+  </div>
+
+ </body>
+ 
+</html>
+
